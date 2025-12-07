@@ -64,7 +64,9 @@ Threshold Tuning
 # Dataset Summary
 
 ✔ 67,463 borrower records
+
 ✔ 35 borrower, credit, and loan-related features
+
 ✔ Target variable: Default (1) vs Fully Paid/Current (0)
 
 # Key feature groups include:
@@ -123,7 +125,9 @@ Correlation heatmap (revealed low linear correlation → motivates tree-based mo
 
 EDA confirms:
 ➡ Default risk correlates with high interest rates and high credit utilization
+
 ➡ Loan grade is one of the strongest categorical predictors
+
 ➡ Dataset is not linearly separable
 
 # Modeling & Experiments
