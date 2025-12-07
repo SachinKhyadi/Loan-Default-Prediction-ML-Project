@@ -55,10 +55,15 @@ Threshold Tuning
 # Project Structure
 .
 ├─ Loan-Default-Prediction.ipynb            # Main ML notebook
+
 ├─ ProjectReport.docx                       # Full project report
+
 ├─ data/                                    # Dataset (not included)
+
 ├─ models/                                  # Saved models (optional)
+
 ├─ images/                                  # EDA plots & confusion matrices
+
 └─ README.md                                # This file
 
 # Dataset Summary
