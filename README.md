@@ -1,16 +1,16 @@
-Loan Default Prediction — Machine Learning Pipeline
+# Loan Default Prediction — Machine Learning Pipeline
 
 Predicting borrower default risk using advanced ML techniques, engineered credit-risk features, and recall-optimized threshold tuning.
 Based on the full project report you provided .
 
-🚀 Overview
+# 🚀 Overview
 
 This repository contains an end-to-end ML pipeline to identify high-risk loan defaulters using borrower attributes, loan details, credit activity indicators, and engineered financial-stress features.
 The project addresses a highly imbalanced dataset (~90% non-default) and implements targeted strategies—SMOTE, SMOTE-Tomek, class weighting, and probability-threshold tuning—to improve minority-class detection.
 
 The final model is an XGBoost classifier optimized for recall, enabling lenders to detect risk-prone borrowers earlier and reduce financial losses.
 
-🧠 Key Objectives
+# 🧠 Key Objectives
 
 Build a predictive model for loan default risk.
 
@@ -22,7 +22,7 @@ Compare models (Logistic Regression, Ridge, Lasso, Random Forest, XGBoost).
 
 Tune thresholds for better real-world decision-making.
 
-🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 Languages & Libraries
 
@@ -52,7 +52,7 @@ Feature Engineering
 
 Threshold Tuning
 
-Project Structure
+# Project Structure
 .
 ├─ Loan-Default-Prediction.ipynb            # Main ML notebook
 ├─ ProjectReport.docx                       # Full project report
@@ -61,13 +61,13 @@ Project Structure
 ├─ images/                                  # EDA plots & confusion matrices
 └─ README.md                                # This file
 
-Dataset Summary
+# Dataset Summary
 
 ✔ 67,463 borrower records
 ✔ 35 borrower, credit, and loan-related features
 ✔ Target variable: Default (1) vs Fully Paid/Current (0)
 
-Key feature groups include:
+# Key feature groups include:
 
 Loan Characteristics (loan amount, interest rate, term, grade)
 
@@ -77,19 +77,19 @@ Credit Indicators (revolving balance, delinquency counts)
 
 Verification & Application Details
 
-🔧 Data Preparation Pipeline
+# 🔧 Data Preparation Pipeline
 
 Major steps from the project report:
 
-1️⃣ Handling Missing Values
+## 1️⃣ Handling Missing Values
 
 Dataset had no missing values, so no imputation required.
 
-2️⃣ Encoding
+## 2️⃣ Encoding
 
 Label Encoding for all categorical variables to preserve compact feature space.
 
-3️⃣ Feature Engineering (Key Enhancements)
+## 3️⃣ Feature Engineering (Key Enhancements)
 
 Revolving Utilization Ratio
 
@@ -101,7 +101,7 @@ Interaction Features
 
 High-Risk Flag
 
-4️⃣ Class Imbalance Fix
+## 4️⃣ Class Imbalance Fix
 
 SMOTE
 
@@ -109,11 +109,11 @@ SMOTE-Tomek Links
 
 Class weights (for linear models)
 
-5️⃣ Scaling
+## 5️⃣ Scaling
 
 StandardScaler applied only to training data (to avoid leakage) for linear models.
 
-🔍 Exploratory Data Analysis
+# 🔍 Exploratory Data Analysis
 
 Distribution plots for loan amount, interest rate, DTI, revolving balance
 
@@ -126,7 +126,7 @@ EDA confirms:
 ➡ Loan grade is one of the strongest categorical predictors
 ➡ Dataset is not linearly separable
 
-Modeling & Experiments
+# Modeling & Experiments
 Models Tested
 Model	Recall (Default=1)	Notes
 Logistic Regression	~0.34	Baseline, low predictive power
@@ -146,7 +146,7 @@ Captures non-linear interactions between risk features
 
 Threshold tuning boosted recall from 8% → 49%
 
-🎯 Final Model: XGBoost + Threshold Tuning
+# 🎯 Final Model: XGBoost + Threshold Tuning
 
 The optimal threshold = 0.15, prioritizing recall (catching defaulters) over accuracy.
 
@@ -156,7 +156,7 @@ More realistic risk detection behavior
 
 Ideal for lending where missing a defaulter is costlier than false positives
 
-🧪 How to Run Locally
+# 🧪 How to Run Locally
 1) Clone the repo
 git clone https://github.com/<your-username>/loan-default-prediction.git
 cd loan-default-prediction
@@ -172,7 +172,7 @@ pip install -r requirements.txt
 
 Open in Jupyter / VS Code and execute all cells.
 
-📝 Key Takeaways
+# 📝 Key Takeaways
 
 Class imbalance must be handled aggressively.
 
@@ -182,7 +182,7 @@ XGBoost + threshold tuning gives the best business-aligned performance.
 
 Engineered risk-focused features significantly improve learning.
 
-🔮 Future Improvements
+# 🔮 Future Improvements
 
 Evaluate LightGBM / CatBoost
 
@@ -194,6 +194,6 @@ Incorporate credit bureau & behavioral data
 
 Deploy as an API for real-time underwriting
 
-📚 References
+# 📚 References
 
 https://www.kaggle.com/datasets/hemanthsai7/loandefault
